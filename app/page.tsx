@@ -168,7 +168,7 @@ export default function Home() {
               <div className="box bg-white p-4 rounded-sm text-pretty font-semibold text-blue-700 lg:col-span-2">
                 ATS Score
                 <div className="user-infor py-4">
-                  <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {/* Resume Score */}
                     <div className="flex flex-col items-center">
                       <AnimatedCircularProgressBar
@@ -231,23 +231,6 @@ export default function Home() {
                     </div>
 
                     {/* Needs Improvement */}
-                    <div className="flex flex-col items-center">
-                      <AnimatedCircularProgressBar
-                        value={atsResult?.needsImprovement ? 100 : 0}
-                        gaugePrimaryColor={
-                          atsResult?.needsImprovement
-                            ? "rgb(234 179 8)"
-                            : "rgb(34 197 94)"
-                        }
-                        gaugeSecondaryColor="rgba(0, 0, 0, 0.1)"
-                      />
-                      <p className="text-sm text-gray-600 mt-2 font-medium">
-                        Needs Improvement:{" "}
-                        <span className="font-bold text-gray-800">
-                          {atsResult?.needsImprovement ? "Yes" : "No"}
-                        </span>
-                      </p>
-                    </div>
                   </div>
                 </div>
               </div>
